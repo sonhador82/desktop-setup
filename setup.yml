@@ -1,0 +1,84 @@
+
+---
+
+- hosts: all
+  user: root
+  gather_facts: no
+
+  tasks:
+   - name: pkgs
+     apt:
+       name: "{{ item }}"
+       state: present
+     loop:
+       - vim
+       - i3
+       - tcpdump
+       - gimp
+       - rxvt-unicode-ml
+       - xfonts-terminus
+       - chromium
+       - fbreader
+       - feh
+       - djview
+       - openvpn
+       - build-essential
+       - mplayer
+       - mencoder
+       - xchm
+       - mupdf
+       - smartmontools
+       - wget
+       - ntfs-3g
+       - openssh-server
+       - openvpn
+       - fbreader
+       - dia
+       - inkscape
+       - mc
+       - mutt
+       - ghostscript
+       - rsync
+       - xinit
+       - pigz
+       - git
+    #shotwell
+# rtorrent
+# samba
+# vncviewer
+# spicy
+# lightdm
+# docker
+# docker-compose
+# 7zip
+# rar x
+# avrdude
+# avr cc
+# blueman
+# lxc
+# fetchmail
+
+       # for monodevelop
+       - apt-transport-https
+       - dirmngr
+       # for unity
+       - libgconf-2-4
+
+       # kvm
+       - qemu-kvm
+       - bridge-utils
+       - libvirt-daemon
+       - libvirt-daemon-system
+       - libvirt-clients
+       - libvirt-doc
+       - virtinst
+       # - libguestfs-tools
+       # - oz
+       # ganeti
+
+   - name: yandex disk
+     apt:
+       name: "{{ item }}"
+       state: present
+     loop:
+       - vim
