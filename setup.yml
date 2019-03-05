@@ -43,6 +43,9 @@
        - pigz
        - git
        - rar
+       - pulseaudio
+       - pulseaudio-utils
+       - pavucontrol
     #shotwell
 # rtorrent
 # samba
