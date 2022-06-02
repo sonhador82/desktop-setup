@@ -1,23 +1,20 @@
 
 ---
 
-- hosts: all
-  user: root
+- hosts: 127.0.0.1
   gather_facts: no
 
   tasks:
    - name: pkgs
      apt:
-       name: "{{ item }}"
-       state: present
-     loop:
+       name: 
        - vim
        - i3
        - tcpdump
        - gimp
-       - rxvt-unicode-ml
+       - rxvt-unicode
        - xfonts-terminus
-       - chromium
+       - chromium-browser
        - fbreader
        - feh
        - djview
@@ -46,15 +43,15 @@
        - pulseaudio
        - pulseaudio-utils
        - pavucontrol
-    #shotwell
+       - shotwell
+       - spice-client-gtk
+       - p7zip
 # rtorrent
 # samba
 # vncviewer
-# spicy
 # lightdm
 # docker
 # docker-compose
-# 7zip
 # rar x
 # avrdude
 # avr cc
@@ -63,26 +60,19 @@
 # fetchmail
 
        # for monodevelop
-       - apt-transport-https
-       - dirmngr
-       # for unity
-       - libgconf-2-4
+      #  - apt-transport-https
+      #  - dirmngr
+      #  # for unity
+      #  - libgconf-2-4
 
-       # kvm
-       - qemu-kvm
-       - bridge-utils
-       - libvirt-daemon
-       - libvirt-daemon-system
-       - libvirt-clients
-       - libvirt-doc
-       - virtinst
+      #  # kvm
+      #  - qemu-kvm
+      #  - bridge-utils
+      #  - libvirt-daemon
+      #  - libvirt-daemon-system
+      #  - libvirt-clients
+      #  - libvirt-doc
+      #  - virtinst
        # - libguestfs-tools
        # - oz
        # ganeti
-
-   - name: yandex disk
-     apt:
-       name: "{{ item }}"
-       state: present
-     loop:
-       - vim
